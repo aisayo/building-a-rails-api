@@ -21,3 +21,17 @@
 * `Model` - ‘logic’ of web application - data is manipulated or saved to database
 * `View` - ‘frontend’ - user facing part of the web application
 * `Controller` - go between for models and views
+
+* When using Rails as an API, we do not need to have a view
+
+## Setting up a Rails API
+
+* Need to create a new rails application
+    ** `rails new <app_name>`
+* Can use `scaffold` generator to quickly build controller actions, models and data base
+    ** `rails g scaffold ModelName attribute:data_type`
+* Need to configure CORS to allow frontend to make requests
+    ** Go to `config/initializers/cors.rb`
+    ** Comment back in lines 8-16
+    ** Change `origins 'example.com'` to `origins '*'`
+    ** In `Gemfile`, comment back in `gem 'rack-cors'`
