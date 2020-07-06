@@ -48,5 +48,19 @@
 
 * When we include an array or hash after the `render json:` method, Rails is implicitly handling the work of converting it to JSON.
 * `to_json` method is being utilized implicitly
+* Rails has built in 'magic' to handle this so we don't have to include it
+* Do not need to use instance variables
     * <https://apidock.com/rails/ActiveRecord/Serialization/to_json>
-    
+
+## Customizing JSON
+
+* We can shape data getting converted into JSON to help make it simpler and more useful for frontend
+* On the Rails backend, add more routes and actions that divide and organize data
+* Each route is considered as an `endpoint`
+* Users of API's use endpoints to access specific pieces of data
+
+* Removing content when rendering can also be done by using the following methods:
+    * `render json: { key: value }`
+    * `render json: hash.slice(attributes)` - creates a new hash with the keys that are passed into `slice`
+    * `render json: hash, only: [attributes]`
+    * `render json: hash, except: [attributes]`
