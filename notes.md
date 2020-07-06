@@ -35,3 +35,15 @@
     * Comment back in lines 8-16
     * Change `origins 'example.com'` to `origins '*'`
     * In `Gemfile`, comment back in `gem 'rack-cors'`
+
+## Rendering Content
+
+* Up to this point, we have been used to just explicitly rendering text
+* We can indicaate what type of content we want to render
+    * Rendering plain text: `render plain: "This text"`
+    * Reminder: response from a fetch request has two methods: `.json()` & `.text()`
+    * Rendering JSON: `render json: <content>`
+
+## Render json:
+
+* 
