@@ -27,7 +27,7 @@
 ## Setting up a Rails API
 
 * Need to create a new rails application
-    ** `rails new <app_name>`
+    `rails new <app_name>`
 * Can use `scaffold` generator to quickly build controller actions, models and data base
     ** `rails g scaffold ModelName attribute:data_type`
 * Need to configure CORS to allow frontend to make requests
