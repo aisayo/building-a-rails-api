@@ -39,11 +39,14 @@
 ## Rendering Content
 
 * Up to this point, we have been used to just explicitly rendering text
-* We can indicaate what type of content we want to render
+* We can indicate what type of content we want to render
     * Rendering plain text: `render plain: "This text"`
     * Reminder: response from a fetch request has two methods: `.json()` & `.text()`
     * Rendering JSON: `render json: <content>`
 
-## Render json:
+## Serialization with to_json
 
-* 
+* When we include an array or hash after the `render json:` method, Rails is implicitly handling the work of converting it to JSON.
+* `to_json` method is being utilized implicitly
+    * <https://apidock.com/rails/ActiveRecord/Serialization/to_json>
+    
