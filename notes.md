@@ -27,7 +27,9 @@
 ## Setting up a Rails API
 
 * Need to create a new rails application
-    * `rails new <app_name>`
+    * `rails new <app_name> --api`
+    * `--api` flag will allow Rails to remove a lot of default features and middleware that will not be needed
+    * Controllers will inherit from `ActionController::API` instead of `ActionController::Base`, generators will skip creating views
 * Can use `scaffold` generator to quickly build controller actions, models and data base
     * `rails g scaffold ModelName attribute:data_type`
 * Need to configure CORS to allow frontend to make requests
@@ -71,3 +73,23 @@
 * If a record is not found, we receive a `nil` which is a falsy-y value
 * We can use conditional statements to render different content based on return value
 
+## Rendering Relations in JSON
+
+* If we want to be inclusive instead of selective, meaning including related objects
+* `Include` can be called when rendering JSON
+* This will include any associated resources
+* `render json: hash, include: [associated object(s)]`
+* We can also customize related objects data that is rendered if desired
+
+## Other Serialization Methods?
+
+* Service Class
+    * A class specific to our domain that handles some of the business logic of the application like arranging JSON data the way we want it
+    * Can be used to extract more complex data modifications
+    * <https://learn.co/tracks/online-software-engineering-structured/front-end-web-programming/rails-as-an-api/extracting-a-service-class>
+    * <https://api.rubyonrails.org/classes/ActiveModel/Serialization.html>
+    * <https://itnext.io/a-quickstart-guide-to-using-serializer-with-your-ruby-on-rails-api-d5052dea52c5>
+    * <https://buttercms.com/blog/json-serialization-in-rails-a-complete-guide>
+
+* Fast JSON API
+    * 
