@@ -64,3 +64,10 @@
     * `render json: hash.slice(attributes)` - creates a new hash with the keys that are passed into `slice`
     * `render json: hash, only: [attributes]`
     * `render json: hash, except: [attributes]`
+
+## Providing Error Messages
+
+* We have the power to define what to do when things go wrong
+* If a record is not found, we receive a `nil` which is a falsy-y value
+* We can use conditional statements to render different content based on return value
+
