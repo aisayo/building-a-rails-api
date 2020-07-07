@@ -92,4 +92,4 @@
     * <https://buttercms.com/blog/json-serialization-in-rails-a-complete-guide>
 
 * Fast JSON API
-    * 
+    * <https://github.com/Netflix/fast_jsonapi>
